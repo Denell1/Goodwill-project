@@ -1,0 +1,13 @@
+
+public class Player {
+	
+	static String player_Name;
+
+	public String getPlayer_Name() {
+		return player_Name;
+	}
+
+	public static void setPlayer_Name(String player_Name) {
+		Player.player_Name = player_Name;
+	}
+}

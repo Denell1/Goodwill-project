@@ -1,0 +1,123 @@
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println("Hello, What's your name");
+		Scanner keyboard = new Scanner(System.in);
+		//Player player_Name = new Player();
+		Player.player_Name = keyboard.nextLine();
+	
+		System.out.println("Hello " +  Player.player_Name);
+		System.out.println("\n");
+		System.out.println("Would you like to play a game? Yes or No");
+		Scanner yesOrno = new Scanner(System.in);
+		String Choice = yesOrno.nextLine();
+		//Choice = yesOrno.nextLine();
+
+		//Player.player_Name = Choice.next();
+		
+		Random Play = new Random();
+		int computerScore = 0;
+		int humanScore = 0;
+		int counter = 0;
+		
+			
+		if (Choice.equals( "No")) { 
+		
+		System.out.println("Ok, Bye!");
+		return;
+		}
+		
+		 if  (Choice.equals("Yes")){
+			System.out.println("Press 0 for Rock, 1 for Paper, 2 for Scissors");
+
+			int computerPlayer = 1+ Play.nextInt();
+			int newPlayer =  Play.nextInt();
+			
+				
+		
+			if (computerPlayer == newPlayer ) {
+				
+				System.out.println("You have a tie, please try again");
+				
+			}
+			
+							
+			else if (newPlayer == 0) {
+				if (computerPlayer == 1) {
+					System.out.println("Computer selected paper, you lost");
+					computerScore++;
+					System.out.println("Computer score" + computerScore );
+					System.out.println("Your Score is " + humanScore );
+				}else if (computerPlayer == 2) {
+					System.out.println("Computer selected scissors" );
+					System.out.println("You won " + humanScore );
+					humanScore++;
+					System.out.println("Computer score" + computerScore );
+					System.out.println(Player.player_Name +"You won " + humanScore );
+					System.out.println( humanScore);
+				}
+			
+else if (newPlayer == 1) {
+				if (computerPlayer == 0) {
+					System.out.println("Computer selected rock ,You won!");
+					humanScore++;
+					System.out.println(Player.player_Name + humanScore );
+					System.out.println("Computer score" + computerScore );
+					
+				
+				}else if (computerPlayer == 2) {
+					System.out.println("Computer selected scissors, you lose!");
+					computerScore++;
+					System.out.println("Computer score" + computerScore );
+					System.out.println(Player.player_Name + humanScore );
+					
+				}
+			}
+		
+
+else if (newPlayer == 2) {
+				if (computerPlayer == 1) {
+					System.out.println("Computer selected paper, you lose");
+					computerScore++;
+					System.out.println("Computer score" + computerScore );
+					System.out.println(Player.player_Name + humanScore );
+					
+				}else if (computerPlayer == 0) {
+					System.out.println("Computer selected rock, you win!");
+					humanScore++;
+					System.out.println(Player.player_Name + humanScore );
+					System.out.println("Computer score" + computerScore );
+				}
+				
+			}
+			
+				
+			if (humanScore == 10) {
+				System.out.println("You win the Game!");
+				counter++;
+			}
+			
+			if (computerScore == 10) {
+				System.out.println("Sorry you lose this game!");
+				counter++;
+			}
+			
+			}
+			
+			
+			
+		}
+			
+			
+	}}
+	
+		
+
+
+
+				
+			
